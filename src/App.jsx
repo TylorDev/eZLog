@@ -4,12 +4,11 @@ function App() {
       className="flex items-center justify-center min-h-screen p-4 bg-center bg-cover "
       style={{ backgroundImage: "url('bg2.gif')" }}
     >
-      <div className="[main] flex  text-white flex-col h-full  bg-[#0E0D0D] outline-yellow-400  ">
+      <div className="[main] flex  text-white flex-col  bg-[#0E0D0D] outline-g  ">
         {LeftSide()}
-        <button className="text-2xl ">
-          {" "}
+        <div className="flex justify-center items-center outline-1 text-2xl pt-5">
           <b>REGISTRATION </b>/ LOGIN{" "}
-        </button>
+        </div>
         {RightSide()}
       </div>
     </div>
@@ -26,7 +25,7 @@ function RightSide() {
         {Terms()}
         <button
           type="submit"
-          className="bg-white text-xl font-bold text-black w-full h-10 mt-5"
+          className="bg-[#FF2E00] text-xl text-white font-bold rounded text-black w-full h-10 mt-5"
         >
           REGISTRATION
         </button>
@@ -40,14 +39,14 @@ function Media() {
   return (
     <div className="flex flex-col items-center w-full">
       <div className="[Social] flex gap-5 mt-5 mb-5">
-        <button className="bg-red-500 rounded-full p-3">AC</button>
-        <button className="bg-red-500 rounded-full p-3">AC</button>
-        <button className="bg-red-500 rounded-full p-3">AC</button>
-        <button className="bg-red-500 rounded-full p-3">AC</button>
-        <button className="bg-red-500 rounded-full p-3">AC</button>
+        <button className="bg-[#950017] rounded-full p-3">AC</button>
+        <button className="bg-[#950017] rounded-full p-3">AC</button>
+        <button className="bg-[#950017] rounded-full p-3">AC</button>
+        <button className="bg-[#950017] rounded-full p-3">AC</button>
+        <button className="bg-[#950017] rounded-full p-3">AC</button>
       </div>
       <div className="mb-20">
-        Have an acount? <a href="/">Login</a>
+        Have an acount? <a  className="underline font-bold" href="/">Login</a>
       </div>
     </div>
   );
@@ -81,7 +80,7 @@ function Input(label = "Texto", type = "text", placeholder) {
 
 function Terms() {
   return (
-    <div>
+    <div className="">
       {Checkbox(
         "I am 18 years old and I have read and accept Terms and Conditions and Privacy Policy ."
       )}
@@ -92,14 +91,17 @@ function Terms() {
 
 function Checkbox(content) {
   return (
-    <div className="flex items-center  ">
-       <input type="checkbox" id="some_id" className="
+    <div className="flex items-center  mt-4 mb-4  ">
+      <input
+        type="checkbox"
+        id="some_id"
+        className="
         relative peer shrink-0
         appearance-none w-6 h-6 border-2 border-red-500 rounded-sm bg-white
         mt-1
-        checked:bg-red-800 checked:border-0"
+        checked:bg-[#950017] checked:border-0   mr-4"
       />
-        <svg
+      <svg
         className="
           absolute 
           w-6 h-6 mt-1
@@ -116,10 +118,6 @@ function Checkbox(content) {
         <polyline points="20 6 9 17 4 12"></polyline>
       </svg>
       <span>{content}</span>
-
-    
-
-
     </div>
   );
 }
@@ -142,4 +140,3 @@ function LeftSide() {
     </div>
   );
 }
-
