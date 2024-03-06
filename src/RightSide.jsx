@@ -8,7 +8,7 @@ export function RightSide() {
     <div className="[Right] flex  bg-[#0e0d0d] flex-col items-center p-5    h-auto3301ff] ">
       <form action="login" className="flex flex-col items-center  ">
         <div className="flex justify-center items-center  text-2xl pt-5">
-          <b>REGIS</b>/ LOGN{" "}
+          <b>REGISa</b>/ LOGN{" "}
         </div>
         {Inputs()}
 
