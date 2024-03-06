@@ -1,14 +1,12 @@
 function App() {
   return (
     <div
-      className="flex items-center justify-center min-h-screen p-4 bg-center bg-cover "
+      className="flex items-center justify-center min-h-screen   bg-center bg-cover "
       style={{ backgroundImage: "url('bg2.gif')" }}
     >
-      <div className="[main] flex  text-white flex-col  bg-[#0E0D0D] outline-g  ">
-        {LeftSide()}
-        <div className="flex justify-center items-center outline-1 text-2xl pt-5">
-          <b>REGISTRATION </b>/ LOGIN{" "}
-        </div>
+      <div className="[main] flex  text-white flex-col      mt-24 m-5 ">
+       
+        {LeftSide()}   
         {RightSide()}
       </div>
     </div>
@@ -16,16 +14,42 @@ function App() {
 }
 export default App;
 
+function LeftSide() {
+  return (
+    <div
+      className="[Left] flex  items-end justify-center  bg-cover relative h-[20vh] " 
+    >
+
+     
+      {/* <div className="[Left-Text]  w-full  text-start">
+        <div className="text-xl font-bold "> HI THERE!</div>
+        <div> Join us and enjoy! :) </div>
+      </div> */}
+      <img
+        className=" w-[24vh] z-30 "
+        src="main2.webp"
+        alt="XD"
+      />
+
+      <img className=" absolute object-cover  w-full h-full"  src="back2.png" alt="XD"  />
+    </div>
+  );
+}
+
+
 function RightSide() {
   return (
-    <div className="[Right] flex  flex-col items-center p-5 ">
-      <form action="login" className="flex flex-col items-center ">
+    <div className="[Right] flex  bg-[#0e0d0d] flex-col items-center p-5  z-50  h-auto3301ff] ">
+      <form action="login" className="flex flex-col items-center  ">
+      <div className="flex justify-center items-center  text-2xl pt-5">
+          <b>REGISTRATION </b>/ LOGIN{" "}
+        </div>
         {Inputs()}
 
         {Terms()}
         <button
           type="submit"
-          className="bg-[#FF2E00] text-xl text-white font-bold rounded text-black w-full h-10 mt-5"
+          className="bg-[#FF2E00] text-xl text-white font-bold rounded w-full h-10 mt-5"
         >
           REGISTRATION
         </button>
@@ -35,21 +59,54 @@ function RightSide() {
   );
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function Media() {
   return (
-    <div className="flex flex-col items-center w-full">
-      <div className="[Social] flex gap-5 mt-5 mb-5">
-        <button className="bg-[#950017] rounded-full p-3">AC</button>
-        <button className="bg-[#950017] rounded-full p-3">AC</button>
-        <button className="bg-[#950017] rounded-full p-3">AC</button>
-        <button className="bg-[#950017] rounded-full p-3">AC</button>
-        <button className="bg-[#950017] rounded-full p-3">AC</button>
+    <div className="flex flex-col items-center justify-between h-full  w-full0044ff]">
+      <div className="[Social] flex items-center justify-between mt-5 mb-5 h-[fit] w-[90%] ">
+        {MediaButtom()}
+        {MediaButtom()}
+        {MediaButtom()}
+        {MediaButtom()}
+        {MediaButtom()}
+        
       </div>
-      <div className="mb-20">
+      <div >
         Have an acount? <a  className="underline font-bold" href="/">Login</a>
       </div>
     </div>
   );
+}
+
+function MediaButtom() {
+  return <button className="bg-[#950017] rounded-full p-3 w-10 h-10 m-2">AC</button>;
 }
 
 function Inputs() {
@@ -65,7 +122,7 @@ function Inputs() {
 function Input(label = "Texto", type = "text", placeholder) {
   return (
     <div className="mt-5">
-      <label htmlhtmlFor="email" className="text-lg">
+      <label htmlFor="email" className="text-lg">
         {label}
       </label>
       <input
@@ -80,7 +137,7 @@ function Input(label = "Texto", type = "text", placeholder) {
 
 function Terms() {
   return (
-    <div className="">
+    <div className=" w-full">
       {Checkbox(
         "I am 18 years old and I have read and accept Terms and Conditions and Privacy Policy ."
       )}
@@ -118,25 +175,6 @@ function Checkbox(content) {
         <polyline points="20 6 9 17 4 12"></polyline>
       </svg>
       <span>{content}</span>
-    </div>
-  );
-}
-
-function LeftSide() {
-  return (
-    <div
-      className="[Left] flex  items-end justify-center h-40 bg-cover relative"
-      style={{ backgroundImage: "url('back2.png')" }}
-    >
-      <div className="[Left-Text]  w-full  text-start">
-        <div className="text-xl font-bold "> HI THERE!</div>
-        <div> Join us and enjoy! :) </div>
-      </div>
-      <img
-        className="absolute  h-full  scale-[120%]  bottom-4 "
-        src="main2.webp"
-        alt="XD"
-      />
     </div>
   );
 }
