@@ -1,4 +1,4 @@
-export function Checkbox(content) {
+export function Checkbox({content}) {
   return (
     <div className="flex items-center  mt-4 mb-4  ">
       <input

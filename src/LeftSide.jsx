@@ -4,7 +4,6 @@ export function LeftSide() {
       className="[Left] flex  items-end justify-center  bg-cover relative h-[20vh] "
     >
 
-
       {/* <div className="[Left-Text]  w-full  text-start">
               <div className="text-xl font-bold "> HI THERE!</div>
               <div> Join us and enjoy! :) </div>

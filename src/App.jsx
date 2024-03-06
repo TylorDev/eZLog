@@ -1,5 +1,5 @@
-import { LeftSide } from "./LeftSide";
-import { RightSide } from "./RightSide";
+import { LeftSide } from "./LeftSide.jsx";
+import { RightSide } from "./RightSide.jsx";
 
 function App() {
   return (
@@ -8,10 +8,13 @@ function App() {
       style={{ backgroundImage: "url('bg2.gif')" }}
     >
       <div className="[main] flex  text-white flex-col      mt-24 m-5 ">
-        {LeftSide()}   
-        {RightSide()}
+        <LeftSide></LeftSide>
+        <RightSide></RightSide>
       </div>
     </div>
   );
 }
+
 export default App;
+
+
