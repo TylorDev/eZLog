@@ -1,20 +1,30 @@
-import { LeftSide } from "./LeftSide.jsx";
-import { RightSide } from "./RightSide.jsx";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { AuthProvider } from "./context/authContext";
+import { ProtectedRoute } from "./routes";
+import HomePage from "./pages/HomePage";
+import RegisterPage from "./pages/RegisterPage";
+import { LoginPage } from "./pages/LoginPage";
+import { Navbar } from "./Navbar";
 
 function App() {
   return (
-    <div
-      className="flex items-center justify-center min-h-screen   bg-center bg-cover "
-      style={{ backgroundImage: "url('bg2.gif')" }}
-    >
-      <div className="[main] flex  text-white flex-col      mt-24 m-5 ">
-        <LeftSide></LeftSide>
-        <RightSide></RightSide>
-      </div>
-    </div>
+    <AuthProvider>
+      <BrowserRouter>
+        <main className="container content-container mx-auto px-10 md:px-0">
+          <Navbar></Navbar>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/register" element={<RegisterPage />} />
+            <Route path="*" element={<h1>La pagina no existe!</h1>} />
+            <Route element={<ProtectedRoute />}>
+              <Route path="/profile" element={<h1>Profile</h1>} />
+            </Route>
+          </Routes>
+        </main>
+      </BrowserRouter>
+    </AuthProvider>
   );
 }
 
 export default App;
-
-

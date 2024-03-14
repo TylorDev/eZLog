@@ -5,12 +5,13 @@ import { Terms } from "./Right/Terms.jsx";
 export function RightSide() {
   return (
     <div className="[Right] flex  bg-[#0e0d0d] flex-col items-center p-5    h-auto3301ff] ">
-      <form action="login" className="flex flex-col items-center  ">
+      <form className="flex flex-col items-center  ">
         <div className="flex justify-center items-center  text-2xl pt-5">
           <b>REGIS </b>/ LOGN{" "}
         </div>
-        <Inputs></Inputs>
-        
+        <Inputs
+          register={{ ...register("email", { required: true }) }}
+        ></Inputs>
 
         <Terms></Terms>
         <button
@@ -20,8 +21,7 @@ export function RightSide() {
           REGISTRATION
         </button>
       </form>
-      <Media/>
+      <Media />
     </div>
   );
 }
-

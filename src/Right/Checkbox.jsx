@@ -1,14 +1,15 @@
-export function Checkbox({content}) {
+export function Checkbox({ content, ...inputProps }) {
   return (
     <div className="flex items-center  mt-4 mb-4  ">
       <input
         type="checkbox"
-        id="some_id"
         className="
         relative peer shrink-0
         appearance-none w-6 h-6 border-2 border-red-500 rounded-sm bg-white
         mt-1
-        checked:bg-[#950017] checked:border-0   mr-4"/>
+        checked:bg-[#950017] checked:border-0   mr-4"
+        {...inputProps}
+      />
       <svg
         className="
           absolute 
