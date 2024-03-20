@@ -5,7 +5,7 @@ export function Navbar() {
   console.log(isAuthenticated, user);
 
   return (
-    <nav className="">
+    <nav className=" text-white">
       <h1 className="text-2xl font-bold">
         <Link to={isAuthenticated ? "/profile" : "/"}>Manager</Link>
       </h1>

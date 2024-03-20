@@ -82,7 +82,7 @@ function Register() {
             Register
           </button>
         </form>
-        <p>
+        <p className="mt-5">
           Already Have an Account?
           <Link className="text-sky-500" to="/login">
             Login

@@ -28,10 +28,10 @@ export function LoginPage() {
   }, [isAuthenticated, navigate]);
 
   return (
-    <div className=" text-white">
+    <div className="text-white">
       <div>
         <LeftSide></LeftSide>
-        <div className="[Right] flex  bg-[#0e0d0d] flex-col items-center p-5     h-auto3301ff] ">
+        <div className="[Right] flex  bg-[#0e0d0d] flex-col py-10 items-center justify-between h-full  ">
           <form
             onSubmit={handleSubmit(onSubmit)}
             className="flex flex-col items-center  "
@@ -68,7 +68,7 @@ export function LoginPage() {
             </button>
           </form>
 
-          <p>
+          <p className="mt-10">
             Dont Have an Account?
             <Link className="text-sky-500" to="/register">
               Register

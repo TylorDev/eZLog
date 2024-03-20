@@ -3,5 +3,14 @@
 @tailwind utilities;
 
 *{
-  outline: 0px solid rgb(93, 0, 255);
+
+
+
+}
+
+body {
+  background-image: url(bg2.gif);
+  background-size:auto 100vh;
+  background-position: 40% 0;
+
 }
